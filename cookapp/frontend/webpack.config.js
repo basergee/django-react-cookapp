@@ -8,7 +8,7 @@ module.exports = {
     entry: './src/index.js',
     output: {
         path: path.join(__dirname, "/dist"),
-        filename: 'main.js'
+        filename: 'static/main.js'
     },
 
     /* Настройки webpack-dev-server */
