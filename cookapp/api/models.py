@@ -1,3 +1,11 @@
 from django.db import models
 
-# Create your models here.
+
+class Category(models.Model):
+    title = models.CharField(max_length=100, unique=True)
+
+
+class Recept(models.Model):
+    title = models.CharField(max_length=100, unique=True)
+    body = models.TextField()
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
