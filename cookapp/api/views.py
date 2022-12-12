@@ -20,3 +20,8 @@ class CategoryViewSet(viewsets.ModelViewSet):
         else:
             content = {'Нет категории': 'Выберите другую категорию'}
             return Response(content, status=status.HTTP_404_NOT_FOUND)
+
+
+class RecipeViewSet(viewsets.ModelViewSet):
+    queryset = Recipe.objects.all()
+    serializer_class = RecipeSerializer
