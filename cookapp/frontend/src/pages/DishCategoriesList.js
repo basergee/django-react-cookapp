@@ -7,7 +7,7 @@ const DishCategoriesList = () => {
     let [dishes, setDishList] = useState([])
 
     useEffect(() => {
-        const url = `http://127.0.0.1:8000/api/dishes`;
+        const url = `/api/dishes`;
         axios.get(url)
             .then(res => {
                 setDishList(res.data);
