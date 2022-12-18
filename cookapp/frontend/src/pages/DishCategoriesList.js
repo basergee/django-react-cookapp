@@ -1,6 +1,7 @@
 import React, {useState, useEffect} from 'react'
 
 import axios from 'axios';
+import {Link} from "react-router-dom";
 
 
 const DishCategoriesList = () => {
@@ -23,7 +24,9 @@ const DishCategoriesList = () => {
             <div className="dishes-list">
                 <ul>
                     {dishes.map( (dish, index) =>
-                        (<li key={index}>{dish.title}</li>) )
+                        (<li key={index}>
+                            <Link to={'dishes/' + dish.id}>{dish.title}</Link>
+                        </li>) )
                     }
                 </ul>
             </div>

@@ -1,6 +1,15 @@
 import React from "react";
 
+import {
+  HashRouter as Router,
+  Routes,
+  Route,
+  Switch,
+  Link,
+} from "react-router-dom";
+
 import DishCategoriesList from '../pages/DishCategoriesList'
+import DishCategory from '../pages/DishCategory'
 
 
 class App extends React.Component {
@@ -11,10 +20,15 @@ class App extends React.Component {
 
     render() {
         return (
-            <div>
-                <h1>Main Page</h1>
-                <DishCategoriesList />
-            </div>
+            <Router>
+                <div>
+                    <h1>Main Page</h1>
+                    <Routes>
+                        <Route path='/dishes/:id/' element={<DishCategory />} />
+                        <Route path='/' element={<DishCategoriesList />} />
+                    </Routes>
+                </div>
+            </Router>
         )
     }
 }
