@@ -1,5 +1,6 @@
 import React from "react";
 
+import DishCategoriesList from '../pages/DishCategoriesList'
 
 class App extends React.Component {
 
@@ -11,6 +12,7 @@ class App extends React.Component {
         return (
             <div>
                 <h1>Main Page</h1>
+                <DishCategoriesList />
             </div>
         )
     }
