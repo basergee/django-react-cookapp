@@ -26,7 +26,7 @@ const DishCategory = () => {
                 <ul>
                     {recipes.map( (recipe, index) =>
                         (<li key={index}>
-                            <Link to={'recipes/' + recipe.id}>{recipe.title}</Link>
+                            <Link to={'/recipes/' + recipe.id}>{recipe.title}</Link>
                         </li>) )
                     }
                 </ul>
