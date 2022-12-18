@@ -2,6 +2,7 @@ import React from "react";
 
 import DishCategoriesList from '../pages/DishCategoriesList'
 
+
 class App extends React.Component {
 
     constructor(props) {

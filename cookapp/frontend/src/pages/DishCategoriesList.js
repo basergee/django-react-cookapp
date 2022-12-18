@@ -23,7 +23,8 @@ const DishCategoriesList = () => {
             <div className="dishes-list">
                 <ul>
                     {dishes.map( (dish, index) =>
-                        (<li key={index}>{dish.title}</li>))}
+                        (<li key={index}>{dish.title}</li>) )
+                    }
                 </ul>
             </div>
         </div>
