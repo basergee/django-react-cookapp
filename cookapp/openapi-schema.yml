@@ -6,7 +6,7 @@ paths:
   /api/dishes/:
     get:
       operationId: listCategorys
-      description: ''
+      description: 'Позволяет получить список категорий рецептов'
       parameters: []
       responses:
         '200':
@@ -22,7 +22,7 @@ paths:
   /api/dishes/{id}/:
     get:
       operationId: retrieveCategory
-      description: ''
+      description: 'Позволяет получить все рецепты выбраной категории'
       parameters:
       - name: id
         in: path
@@ -42,7 +42,7 @@ paths:
   /api/recipes/:
     get:
       operationId: listRecipes
-      description: ''
+      description: 'Позволяет получить все доступные рецепты'
       parameters: []
       responses:
         '200':
@@ -58,7 +58,7 @@ paths:
   /api/recipes/{id}/:
     get:
       operationId: retrieveRecipe
-      description: ''
+      description: 'Позволяет получить выбранный рецепт'
       parameters:
       - name: id
         in: path
