@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 import axios from 'axios';
 import {Link} from "react-router-dom";
+import ListGroup from 'react-bootstrap/ListGroup';
 
 
 const DishCategoriesList = () => {
@@ -22,13 +23,13 @@ const DishCategoriesList = () => {
         <div>
             <h3>Here go dishes</h3>
             <div className="dishes-list">
-                <ul>
+                <ListGroup>
                     {dishes.map( (dish, index) =>
-                        (<li key={index}>
+                        (<ListGroup.Item action key={index}>
                             <Link to={'dishes/' + dish.id}>{dish.title}</Link>
-                        </li>) )
+                        </ListGroup.Item>) )
                     }
-                </ul>
+                </ListGroup>
             </div>
         </div>
     )
