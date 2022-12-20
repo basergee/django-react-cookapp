@@ -2,6 +2,9 @@ import React, {useState, useEffect} from 'react'
 
 import axios from 'axios';
 import { Link, useParams } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Row from 'react-bootstrap/Row';
 
 
 const DishCategory = () => {
@@ -23,13 +26,23 @@ const DishCategory = () => {
         <div>
             <h3>List of recipes in this category</h3>
             <div className="recipes-list">
-                <ul>
+                <Row xs={1} lg={4} md={3} sm={2} className="g-4">
                     {recipes.map( (recipe, index) =>
-                        (<li key={index}>
-                            <Link to={'/recipes/' + recipe.id}>{recipe.title}</Link>
-                        </li>) )
+                        (
+                            <Col key={recipe.id}>
+                                <Card bg={"light"} style={{ width: '18rem' }} className="mb-5">
+                                    <Card.Header>{recipe.title}</Card.Header>
+                                    <Card.Body>
+                                        <Card.Text>
+                                            {recipe.body.substring(0, 20) + '...'}
+                                        </Card.Text>
+                                        <Link to={'/recipes/' + recipe.id}>Посмотреть</Link>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                        ))
                     }
-                </ul>
+                </Row>
             </div>
         </div>
     );
