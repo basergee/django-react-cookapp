@@ -2,6 +2,7 @@ import React, {useState, useEffect} from 'react'
 
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import Card from 'react-bootstrap/Card';
 
 
 const RecipeDetail = () => {
@@ -19,10 +20,16 @@ const RecipeDetail = () => {
             });
     }, []);
 
-    return(
+    return (
         <>
-            <h3>{recipe.title}</h3>
-            <h3>{recipe.body}</h3>
+            <Card bg={"light"}>
+                <Card.Header className="fs-1">{recipe.title}</Card.Header>
+                <Card.Body>
+                    <Card.Text className="fs-3">
+                        {recipe.body}
+                    </Card.Text>
+                </Card.Body>
+            </Card>
         </>
     );
 }
