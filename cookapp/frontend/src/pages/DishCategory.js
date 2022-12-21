@@ -23,25 +23,23 @@ const DishCategory = () => {
     }, []);
 
     return (
-        <div className="recipes-list">
-            <Row xs={1} lg={4} md={3} sm={2} className="g-4">
-                {recipes.map( (recipe, index) =>
-                    (
-                        <Col key={recipe.id}>
-                            <Card bg={"light"} style={{ width: '18rem' }} className="mb-5">
-                                <Card.Header>{recipe.title}</Card.Header>
-                                <Card.Body>
-                                    <Card.Text>
-                                        {recipe.body.substring(0, 20) + '...'}
-                                    </Card.Text>
-                                    <Link to={'/recipes/' + recipe.id}>Посмотреть</Link>
-                                </Card.Body>
-                            </Card>
-                        </Col>
-                    ))
-                }
-            </Row>
-        </div>
+        <Row xs={1} lg={4} md={3} sm={2} className="g-4">
+            {recipes.map( (recipe, index) =>
+                (
+                    <Col key={recipe.id}>
+                        <Card bg={"light"} style={{ width: '18rem' }} className="mb-5">
+                            <Card.Header>{recipe.title}</Card.Header>
+                            <Card.Body>
+                                <Card.Text>
+                                    {recipe.body.substring(0, 20) + '...'}
+                                </Card.Text>
+                                <Link to={'/recipes/' + recipe.id}>Посмотреть</Link>
+                            </Card.Body>
+                        </Card>
+                    </Col>
+                ))
+            }
+        </Row>
     );
 }
 
