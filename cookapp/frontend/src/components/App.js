@@ -23,7 +23,7 @@ class App extends React.Component {
     render() {
         return (
             <Router>
-                <div>
+                <div className="container-md">
                     <Header />
                     <Routes>
                         <Route path='/dishes/:id/' element={<DishCategory />} />

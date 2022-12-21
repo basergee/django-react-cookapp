@@ -3,7 +3,9 @@ import React from "react";
 
 const Header = () => {
     return (
-        <h1>Сборник рецептов</h1>
+        <div className="container-md">
+            <h1>Сборник рецептов</h1>
+        </div>
     )
 }
 

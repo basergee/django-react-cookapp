@@ -20,7 +20,7 @@ const DishCategoriesList = () => {
     }, []);
 
     return (
-        <div>
+        <div className="container-md">
             <h3>Here go dishes</h3>
             <div className="dishes-list">
                 <ListGroup>
