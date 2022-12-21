@@ -20,10 +20,10 @@ const RecipeDetail = () => {
     }, []);
 
     return(
-        <div className="container-md">
+        <>
             <h3>{recipe.title}</h3>
             <h3>{recipe.body}</h3>
-        </div>
+        </>
     );
 }
 

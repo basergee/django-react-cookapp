@@ -25,11 +25,13 @@ class App extends React.Component {
             <Router>
                 <div className="container-md">
                     <Header />
-                    <Routes>
-                        <Route path='/dishes/:id/' element={<DishCategory />} />
-                        <Route path='/recipes/:id' element={<RecipeDetail />} />
-                        <Route path='/' element={<DishCategoriesList />} />
-                    </Routes>
+                    <div className="container-md shadow p-3 mb-5 bg-body rounded">
+                        <Routes>
+                            <Route path='/dishes/:id/' element={<DishCategory />} />
+                            <Route path='/recipes/:id' element={<RecipeDetail />} />
+                            <Route path='/' element={<DishCategoriesList />} />
+                        </Routes>
+                    </div>
                 </div>
             </Router>
         )

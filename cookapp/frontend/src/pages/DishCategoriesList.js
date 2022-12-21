@@ -20,16 +20,14 @@ const DishCategoriesList = () => {
     }, []);
 
     return (
-        <div className="container-md">
-            <div className="dishes-list">
-                <ListGroup>
-                    {dishes.map( (dish, index) =>
-                        (<ListGroup.Item action key={index}>
-                            <Link to={'dishes/' + dish.id}>{dish.title}</Link>
-                        </ListGroup.Item>) )
-                    }
-                </ListGroup>
-            </div>
+        <div className="dishes-list">
+            <ListGroup>
+                {dishes.map( (dish, index) =>
+                    (<ListGroup.Item action key={index}>
+                        <Link to={'dishes/' + dish.id}>{dish.title}</Link>
+                    </ListGroup.Item>) )
+                }
+            </ListGroup>
         </div>
     )
 }
