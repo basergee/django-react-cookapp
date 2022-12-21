@@ -25,7 +25,7 @@ class App extends React.Component {
             <Router>
                 <div className="container-md">
                     <Header />
-                    <div className="container-md shadow p-3 mb-5 bg-body rounded">
+                    <div className="container-md">
                         <Routes>
                             <Route path='/dishes/:id/' element={<DishCategory />} />
                             <Route path='/recipes/:id' element={<RecipeDetail />} />
