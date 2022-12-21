@@ -11,6 +11,7 @@ import {
 import DishCategoriesList from '../pages/DishCategoriesList'
 import DishCategory from '../pages/DishCategory'
 import RecipeDetail from '../pages/RecipeDetail'
+import Header from './Header'
 
 
 class App extends React.Component {
@@ -23,7 +24,7 @@ class App extends React.Component {
         return (
             <Router>
                 <div>
-                    <h1>Main Page</h1>
+                    <Header />
                     <Routes>
                         <Route path='/dishes/:id/' element={<DishCategory />} />
                         <Route path='/recipes/:id' element={<RecipeDetail />} />
