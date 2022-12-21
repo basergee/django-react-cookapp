@@ -21,7 +21,6 @@ const DishCategoriesList = () => {
 
     return (
         <div className="container-md">
-            <h3>Here go dishes</h3>
             <div className="dishes-list">
                 <ListGroup>
                     {dishes.map( (dish, index) =>

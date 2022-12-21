@@ -24,7 +24,6 @@ const DishCategory = () => {
 
     return(
         <div className="container-md">
-            <h3>List of recipes in this category</h3>
             <div className="recipes-list">
                 <Row xs={1} lg={4} md={3} sm={2} className="g-4">
                     {recipes.map( (recipe, index) =>
