@@ -8,10 +8,10 @@ import {
   Link,
 } from "react-router-dom";
 
-import DishCategoriesList from '../pages/DishCategoriesList'
-import DishCategory from '../pages/DishCategory'
-import RecipeDetail from '../pages/RecipeDetail'
-import Header from './Header'
+import DishCategoriesList from '../pages/DishCategoriesList';
+import DishCategory from '../pages/DishCategory';
+import RecipeDetail from '../pages/RecipeDetail';
+import Header from './Header';
 
 
 class App extends React.Component {
